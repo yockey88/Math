@@ -8,7 +8,5 @@ BUILD_DIR = build
 SRC = $(SRC_DIR)/*.cpp
 INCLUDE = -Iinclude
 
-INLUDE = $(INCLUDE_CORE) $(INCLUDE_MAP) $(ASSETS)
-
 all:
-	$(CC) $(C_FLAGS) $(INLUDE) $(SRC) -o $(BUILD_DIR)/$(OBJ_NAME)
+	$(CC) $(C_FLAGS) $(INCLUDE) $(SRC) -o $(BUILD_DIR)/$(OBJ_NAME)
