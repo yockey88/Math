@@ -27,9 +27,9 @@ namespace Y {
 
         /// Functions ///
 
-        std::tuple<double , double , double , double> parseEqnLine(std::string &line);
+        std::tuple<float , float , float , float , char , char> parseEqnLine(std::string &line);
 
-        std::tuple<double , double> solveQuadratic (double a , double b , double c , double d);
+        std::tuple<float , float> solveQuadratic (float a , float b , float c , float d , char op1 , char op2);
 
         /////////////////////////
         /// End of Functions ///

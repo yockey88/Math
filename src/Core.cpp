@@ -46,8 +46,9 @@ namespace Y {
             std::string eqn;
             std::cout << "[ENTER EQN] | ";
             std::cin >> eqn; std::cin.ignore();
-            auto [a , b , c , d] = parseEqnLine(eqn);
-            auto [posRt , negRt] = solveQuadratic(a , b , c , d);
+            auto [a , b , c , d , op1 , op2] = parseEqnLine(eqn);
+            auto [posRt , negRt] = solveQuadratic(a , b , c , d , op1 , op2);
+            std::cout << posRt << "," << negRt << std::endl;
             if (posRt != -1.0f && negRt != -1.0f) {
                 std::cout << "[EQN] " << eqn << std::endl;
                 std::cout << "[ROOTS OF EQN] {" << posRt << " , " << negRt << "}" << std::endl;

@@ -18,37 +18,41 @@ namespace Y {
 
         /// Functions ///
 
-        std::tuple<double , double , double , double> parseEqnLine(std::string &line) {
-            int i1 , i2 , i3;
-            double a , b , c , d;
-            bool found1 = false , found2 = false , found3 = false;
-            std::string term1 , term2 , term3 , term4;
-
+        std::tuple<float , float , float , float , char , char> parseEqnLine(std::string &line) {
+            int s1_index = -1, s2_index = -1, x1 = -1, x2 = -1 , e_index = -1;
+            char op1 = '!', op2 = '!';
+            float a , b , c , d;
             for (int i = 0; i < line.length(); i++) {
-                if (line[i] == '^') { found1 = true; i1 = i; }
-                if (line[i] == 'x') { found2 = true; i2 = i; }
-                if (line[i] == '=') { found3 = true; i3 = i; }
+                if (line[i] == 'x' && line[i + 1] == '^') {
+                    x1 = i;
+                    (i == 0) ? (a = 1.0f) : (a = std::stof(line.substr(0 , i)));
+                }
+                if (line[i] == 'x' && line[i + 1] != '^') {
+                    x2 = i;
+                    (line[i - 1] == '+' || line[i - 1] == '-') ? (b = 1.0f) : (b = std::stof(line.substr(x1 + 4 , i - (x1 + 3))));
+                }
+                if ((line[i] == '+' || line[i] == '-') && line[i - 2] == '^') {
+                    s1_index = i;
+                    op1 = line[i];
+                }
+                if ((line[i] == '+' || line[i] == '-') && line[i - 2] != '^') {
+                    s2_index = i;
+                    op2 = line[i];
+                }
+                if (line[i] == '=') e_index = i;
             }
-
-            if (!found1 && !found2 && !found3) {
-                std::cout << "{!!!} | [EQN -> " << line << "] is invalid" << std::endl;
-                std::cout << "[USAGE]: ./build/math <ax^2 + bx + c = d>" << std::endl;
-                exit(1);
-            }
-
-            a = std::stod(line.substr(0 , i1 - 1));
-            b = std::stod(line.substr(i1 + 3, i2 - i1 - 3));
-            c = std::stod(line.substr(i2 + 2 , i3 - 1));
-            d = std::stod(line.substr(i3 + 1 , line.length() - i3 - 1));
-            
-            return std::make_tuple(a , b , c , d);
+            c = std::stof(line.substr(s2_index + 1 , e_index - s2_index));
+            d = std::stof(line.substr(e_index + 1 , line.length() - e_index + 1));
+            return std::make_tuple(a , b , c , d , op1 , op2);
         }
 
-        std::tuple<double , double> solveQuadratic (double a , double b , double c , double d) {
-            double neg , pos , rt;
-            double x;
-
-            if ((pow(b,2) - 4 * a * c)< 0) {
+        std::tuple<float , float> solveQuadratic (float a , float b , float c , float d , char op1 , char op2) {
+            std::cout << "a = " << a << std::endl; std::cout << "b = " << b << std::endl; 
+            std::cout << "c = " << c << std::endl; std::cout << "d = " << d << std::endl;
+            double neg , pos , rt , x;
+            if (op1 == '-') b *= -1;
+            if (op2 == '-') c *= -1;
+            if ((pow(b,2) - (4 * a * c)) < 0) {
                 std::cout << "Roots are complex" << std::endl;
                 return std::make_tuple(-1.0f , -1.0f);
             } else if (a == 0 && b > 0) {
@@ -66,8 +70,8 @@ namespace Y {
 
             c -= d;
             rt = sqrt((pow(b,2) - 4 * a * c));
-            neg = (-b - rt) / (2 * a);
-            pos = (-b + rt) / (2 * a);
+            neg = -(b + rt) / (2 * a);
+            pos = (rt - b) / (2 * a);
 
             return std::make_tuple(pos , neg);
         }
