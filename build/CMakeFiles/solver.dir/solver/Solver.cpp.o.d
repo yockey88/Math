@@ -3,6 +3,8 @@ CMakeFiles/solver.dir/solver/Solver.cpp.o: \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/Solver.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/Core.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../solver/include/Solver.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../complex/include/Complex.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../complex/include/../../include/Core.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/string \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config_site \

@@ -10,25 +10,68 @@ namespace Y {
         /// End of Structs ///
         /////////////////////
 
-
-
         /// Classes ///
 
         ComplexNum::ComplexNum() {
-            real = 0.0f;
-            imag = 0.0f;
+            real = 0;
+            imag = 0;
         }
 
-        ComplexNum::ComplexNum(float a , float b) {
+        ComplexNum::ComplexNum(int a , int b) {
             real = a;
             imag = b;
+        }
+
+        ComplexNum ComplexNum::operator+(ComplexNum &other){
+            ComplexNum hold;
+            hold.setReal(real + other.getRealPart());
+            hold.setImag(imag + other.getImagPart());
+
+            return hold;
+        }
+
+        ComplexNum ComplexNum::operator-(ComplexNum &other) {
+            ComplexNum hold;
+            hold.setReal(real - other.getRealPart());
+            hold.setImag(imag - other.getImagPart());
+
+            return hold;
+        }
+
+        ComplexNum ComplexNum::operator*(ComplexNum &other) {
+            ComplexNum hold;
+            // a1*a2 + a1*b2*i + a2*b1*i + b1*b2*(-1)
+            int hold1 = real * other.getRealPart(); // real
+            int hold2 = real * other.getImagPart(); // imaginary
+            int hold3 = imag * other.getRealPart();
+            int hold4 = imag * other.getImagPart() * -1; // real
+            hold.setReal(hold1 + hold4);
+            hold.setImag(hold2 + hold3);
+            return hold;
+        }
+
+        void ComplexNum::operator+=(ComplexNum &other) {
+            real += other.getRealPart();
+            imag += other.getImagPart();
+        }
+
+        void ComplexNum::operator-=(ComplexNum &other) {
+            real -= other.getRealPart();
+            imag -= other.getImagPart();
+        }
+
+        void ComplexNum::operator*=(ComplexNum &other) {
+            int hold1 = real * other.getRealPart();
+            int hold2 = real * other.getImagPart();
+            int hold3 = imag * other.getRealPart();
+            int hold4 = imag * other.getImagPart() * -1;
+            real = hold1 + hold4;
+            imag = hold2 + hold3;
         }
 
         ///////////////////////
         /// End of Classes ///
         /////////////////////
-
-
 
         /// Functions ///
 

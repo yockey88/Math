@@ -13,8 +13,6 @@ namespace Y {
         /// End of Structs ///
         /////////////////////
 
-
-
         /// Classes ///
 
         class ComplexNum {
@@ -22,7 +20,20 @@ namespace Y {
 
             public:
                 ComplexNum();
-                ComplexNum(float a , float b);
+                ComplexNum(int a , int b);
+
+                ComplexNum operator+(ComplexNum &other);
+                ComplexNum operator-(ComplexNum &other);
+                ComplexNum operator*(ComplexNum &other);
+                void operator+=(ComplexNum &other);
+                void operator-=(ComplexNum &other);
+                void operator*=(ComplexNum &other);
+
+                inline void setReal(int real) { this->real = real; }
+                inline void setImag(int imag) { this->imag = imag; }
+
+                inline int getRealPart() const { return real; }
+                inline int getImagPart() const { return imag; }
         };
 
         ///////////////////////

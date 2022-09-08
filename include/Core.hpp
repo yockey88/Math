@@ -2,6 +2,7 @@
 #define CORE_HPP
 
 #include "../solver/include/Solver.hpp"
+#include "../complex/include/Complex.hpp"
 
 #include<string>
 #include<iostream>
