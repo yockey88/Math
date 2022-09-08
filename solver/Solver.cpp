@@ -1,4 +1,4 @@
-#include "Solver.hpp"
+#include "include/Solver.hpp"
 
 namespace Y {
 
@@ -18,7 +18,7 @@ namespace Y {
 
         /// Functions ///
 
-        std::tuple<double , double , double , double> parseEqnLine(std::string line) {
+        std::tuple<double , double , double , double> parseEqnLine(std::string &line) {
             int i1 , i2 , i3;
             double a , b , c , d;
             bool found1 = false , found2 = false , found3 = false;
@@ -50,7 +50,7 @@ namespace Y {
 
             if ((pow(b,2) - 4 * a * c)< 0) {
                 std::cout << "Roots are complex" << std::endl;
-                return std::make_tuple(0.0f , 0.0f);
+                return std::make_tuple(-1.0f , -1.0f);
             } else if (a == 0 && b > 0) {
                 d -= c;
                 x = (d + 0.0f)/ (b + 0.0f);
@@ -61,7 +61,7 @@ namespace Y {
                 return std::make_tuple(x + 0.0f , 0.0f);
             } else if (a == 0 && b == 0) {
                 std::cout << "Coeffiecients of x are 0\n[No Solutions]" << std::endl;
-                return std::make_tuple(0.0f , 0.0f);
+                return std::make_tuple(-1.0f , -1.0f);
             }
 
             c -= d;
