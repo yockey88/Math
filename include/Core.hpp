@@ -1,5 +1,7 @@
-#ifndef SOLVER_HPP
-#define SOLVER_HPP
+#ifndef CORE_HPP
+#define CORE_HPP
+
+#include "../solver/include/Solver.hpp"
 
 #include<string>
 #include<iostream>
@@ -9,7 +11,7 @@
 #include<memory>
 #include<vector>
 #include<fstream>
-#include<tuple>
+#include<utility>
 
 namespace Y {
 
@@ -17,9 +19,22 @@ namespace Y {
 
         /// Structs ///
 
+        struct YMEngine {
+            YMEngine();
+
+            bool running;
+
+            void m_menu();
+            void m_menuOptions(auto &input);
+
+            void runEqnSolver();
+        };
+
         ///////////////////////
         /// End of Structs ///
         /////////////////////
+
+
 
         /// Classes ///
 
@@ -27,11 +42,9 @@ namespace Y {
         /// End of Classes ///
         /////////////////////
 
+
+
         /// Functions ///
-
-        std::tuple<double , double , double , double> parseEqnLine(std::string line);
-
-        std::tuple<double , double> solveQuadratic (double a , double b , double c , double d);
 
         /////////////////////////
         /// End of Functions ///
@@ -41,4 +54,4 @@ namespace Y {
 
 } // End of Y
 
-#endif /* Solver.hpp */
+#endif /* Core.hpp */
