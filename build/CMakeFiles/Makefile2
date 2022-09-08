@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /Users/chris/Desktop/Code/Projects/GitHub/Math/build
 
 # The main recursive "all" target.
 all: CMakeFiles/solver.dir/all
+all: CMakeFiles/complex.dir/all
 all: CMakeFiles/math.dir/all
 .PHONY : all
 
@@ -73,6 +74,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/solver.dir/clean
+clean: CMakeFiles/complex.dir/clean
 clean: CMakeFiles/math.dir/clean
 .PHONY : clean
 
@@ -83,7 +85,7 @@ clean: CMakeFiles/math.dir/clean
 CMakeFiles/solver.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=4,5 "Built target solver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=6,7 "Built target solver"
 .PHONY : CMakeFiles/solver.dir/all
 
 # Build rule for subdir invocation for target.
@@ -103,18 +105,45 @@ CMakeFiles/solver.dir/clean:
 .PHONY : CMakeFiles/solver.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/complex.dir
+
+# All Build rule for target.
+CMakeFiles/complex.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=1,2 "Built target complex"
+.PHONY : CMakeFiles/complex.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/complex.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/complex.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
+.PHONY : CMakeFiles/complex.dir/rule
+
+# Convenience name for target.
+complex: CMakeFiles/complex.dir/rule
+.PHONY : complex
+
+# clean rule for target.
+CMakeFiles/complex.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/clean
+.PHONY : CMakeFiles/complex.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/math.dir
 
 # All Build rule for target.
+CMakeFiles/math.dir/all: CMakeFiles/complex.dir/all
 CMakeFiles/math.dir/all: CMakeFiles/solver.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=1,2,3 "Built target math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=3,4,5 "Built target math"
 .PHONY : CMakeFiles/math.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 7
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/math.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
 .PHONY : CMakeFiles/math.dir/rule
