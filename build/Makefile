@@ -155,6 +155,19 @@ math/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/build
 .PHONY : math/fast
 
+#=============================================================================
+# Target rules for targets named test
+
+# Build rule for target.
+test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test
+.PHONY : test
+
+# fast build rule for target.
+test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
+
 complex/Complex.o: complex/Complex.cpp.o
 .PHONY : complex/Complex.o
 
@@ -233,6 +246,7 @@ src/Core.o: src/Core.cpp.o
 # target to build an object file
 src/Core.cpp.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/Core.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Core.cpp.o
 .PHONY : src/Core.cpp.o
 
 src/Core.i: src/Core.cpp.i
@@ -241,6 +255,7 @@ src/Core.i: src/Core.cpp.i
 # target to preprocess a source file
 src/Core.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/Core.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Core.cpp.i
 .PHONY : src/Core.cpp.i
 
 src/Core.s: src/Core.cpp.s
@@ -249,7 +264,32 @@ src/Core.s: src/Core.cpp.s
 # target to generate assembly for a file
 src/Core.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/src/Core.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/src/Core.cpp.s
 .PHONY : src/Core.cpp.s
+
+tests.o: tests.cpp.o
+.PHONY : tests.o
+
+# target to build an object file
+tests.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests.cpp.o
+.PHONY : tests.cpp.o
+
+tests.i: tests.cpp.i
+.PHONY : tests.i
+
+# target to preprocess a source file
+tests.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests.cpp.i
+.PHONY : tests.cpp.i
+
+tests.s: tests.cpp.s
+.PHONY : tests.s
+
+# target to generate assembly for a file
+tests.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests.cpp.s
+.PHONY : tests.cpp.s
 
 # Help Target
 help:
@@ -262,6 +302,7 @@ help:
 	@echo "... complex"
 	@echo "... math"
 	@echo "... solver"
+	@echo "... test"
 	@echo "... complex/Complex.o"
 	@echo "... complex/Complex.i"
 	@echo "... complex/Complex.s"
@@ -274,6 +315,9 @@ help:
 	@echo "... src/Core.o"
 	@echo "... src/Core.i"
 	@echo "... src/Core.s"
+	@echo "... tests.o"
+	@echo "... tests.i"
+	@echo "... tests.s"
 .PHONY : help
 
 

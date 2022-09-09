@@ -13,6 +13,7 @@
 #include<vector>
 #include<fstream>
 #include<utility>
+#include<cassert>
 
 namespace Y {
 
