@@ -69,6 +69,25 @@ namespace Y {
             imag = hold2 + hold3;
         }
 
+        std::ostream& operator<<(std::ostream &os , const ComplexNum &cm) {
+            if (cm.getRealPart() != 0 && cm.getImagPart() != 0) {
+                os << cm.getRealPart();
+                if (cm.getImagPart() < 0) {
+                    os << "-";
+                } else if (cm.getImagPart() > 0 ) {
+                    os << "+";
+                }
+                os << cm.getImagPart() << "i";
+            } else if (cm.getRealPart() != 0 && cm.getImagPart() == 0) {
+                os << cm.getRealPart();
+            } else if (cm.getRealPart() == 0 && cm.getImagPart() != 0) {
+                os << cm.getImagPart() << "i";
+            } else {
+                os << 0;
+            }
+            return os;
+        }
+
         ///////////////////////
         /// End of Classes ///
         /////////////////////

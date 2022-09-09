@@ -3,6 +3,9 @@
 
 #include "../../include/Core.hpp"
 
+#include<iostream>
+#include<fstream>
+
 namespace Y {
 
     namespace math {
@@ -28,6 +31,7 @@ namespace Y {
                 void operator+=(ComplexNum &other);
                 void operator-=(ComplexNum &other);
                 void operator*=(ComplexNum &other);
+                friend std::ostream& operator<<(std::ostream &os , const ComplexNum &cm);
 
                 inline void setReal(int real) { this->real = real; }
                 inline void setImag(int imag) { this->imag = imag; }

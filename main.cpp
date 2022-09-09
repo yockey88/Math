@@ -8,9 +8,9 @@ int main(int argc,char* argv[]) {
     // 6 + 6i + 6i + (-1)6
     // 12i
 
-    std::cout << numA.getRealPart() << "," << numA.getImagPart() << " " << numB.getRealPart() << "," << numB.getImagPart() << std::endl;
+    std::cout << numA << "," << numB << std::endl;
     numA *= numB; // 0 12
-    std::cout << numA.getRealPart() << "," << numA.getImagPart() << std::endl;
+    std::cout << numA << std::endl;
     // numA += numB;
     // std::cout << numA.getRealPart() << "," << numA.getImagPart() << std::endl;
     // numA -= numB;
