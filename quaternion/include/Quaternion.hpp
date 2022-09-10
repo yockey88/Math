@@ -17,6 +17,7 @@ namespace Y {
         // classes //
 
         class Quaternion {
+            Vec3 vecPart;
             int real , i , j , k;
 
             public:

@@ -16,6 +16,9 @@ namespace Y {
             i = 0;
             j = 0;
             k = 0;
+            vecPart.x = 0;
+            vecPart.y = 0;
+            vecPart.z = 0;
         }
 
         Quaternion::Quaternion(int real , int i , int j , int k) {
@@ -23,6 +26,9 @@ namespace Y {
             this->i = i;
             this->j = j;
             this->k = k;
+            vecPart.x = i;
+            vecPart.y = j;
+            vecPart.z = k;
         }
 
         Quaternion Quaternion::operator+(Quaternion &other) {
