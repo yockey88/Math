@@ -3,7 +3,6 @@
 
 #include "../../include/Core.hpp"
 
-#include<iostream>
 #include<fstream>
 
 namespace Y {

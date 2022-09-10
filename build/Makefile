@@ -130,6 +130,19 @@ solver/fast:
 .PHONY : solver/fast
 
 #=============================================================================
+# Target rules for targets named vector
+
+# Build rule for target.
+vector: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 vector
+.PHONY : vector
+
+# fast build rule for target.
+vector/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/build
+.PHONY : vector/fast
+
+#=============================================================================
 # Target rules for targets named complex
 
 # Build rule for target.
@@ -141,6 +154,19 @@ complex: cmake_check_build_system
 complex/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/build
 .PHONY : complex/fast
+
+#=============================================================================
+# Target rules for targets named quaternion
+
+# Build rule for target.
+quaternion: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quaternion
+.PHONY : quaternion
+
+# fast build rule for target.
+quaternion/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/build
+.PHONY : quaternion/fast
 
 #=============================================================================
 # Target rules for targets named math
@@ -215,6 +241,30 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/main.cpp.s
 .PHONY : main.cpp.s
+
+quaternion/Quaternion.o: quaternion/Quaternion.cpp.o
+.PHONY : quaternion/Quaternion.o
+
+# target to build an object file
+quaternion/Quaternion.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/quaternion/Quaternion.cpp.o
+.PHONY : quaternion/Quaternion.cpp.o
+
+quaternion/Quaternion.i: quaternion/Quaternion.cpp.i
+.PHONY : quaternion/Quaternion.i
+
+# target to preprocess a source file
+quaternion/Quaternion.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/quaternion/Quaternion.cpp.i
+.PHONY : quaternion/Quaternion.cpp.i
+
+quaternion/Quaternion.s: quaternion/Quaternion.cpp.s
+.PHONY : quaternion/Quaternion.s
+
+# target to generate assembly for a file
+quaternion/Quaternion.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/quaternion/Quaternion.cpp.s
+.PHONY : quaternion/Quaternion.cpp.s
 
 solver/Solver.o: solver/Solver.cpp.o
 .PHONY : solver/Solver.o
@@ -291,6 +341,30 @@ tests.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/tests.cpp.s
 .PHONY : tests.cpp.s
 
+vector/Vector.o: vector/Vector.cpp.o
+.PHONY : vector/Vector.o
+
+# target to build an object file
+vector/Vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/vector/Vector.cpp.o
+.PHONY : vector/Vector.cpp.o
+
+vector/Vector.i: vector/Vector.cpp.i
+.PHONY : vector/Vector.i
+
+# target to preprocess a source file
+vector/Vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/vector/Vector.cpp.i
+.PHONY : vector/Vector.cpp.i
+
+vector/Vector.s: vector/Vector.cpp.s
+.PHONY : vector/Vector.s
+
+# target to generate assembly for a file
+vector/Vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/vector/Vector.cpp.s
+.PHONY : vector/Vector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -301,14 +375,19 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... complex"
 	@echo "... math"
+	@echo "... quaternion"
 	@echo "... solver"
 	@echo "... test"
+	@echo "... vector"
 	@echo "... complex/Complex.o"
 	@echo "... complex/Complex.i"
 	@echo "... complex/Complex.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... quaternion/Quaternion.o"
+	@echo "... quaternion/Quaternion.i"
+	@echo "... quaternion/Quaternion.s"
 	@echo "... solver/Solver.o"
 	@echo "... solver/Solver.i"
 	@echo "... solver/Solver.s"
@@ -318,6 +397,9 @@ help:
 	@echo "... tests.o"
 	@echo "... tests.i"
 	@echo "... tests.s"
+	@echo "... vector/Vector.o"
+	@echo "... vector/Vector.i"
+	@echo "... vector/Vector.s"
 .PHONY : help
 
 
