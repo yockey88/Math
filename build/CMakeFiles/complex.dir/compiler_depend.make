@@ -146,6 +146,7 @@ CMakeFiles/complex.dir/complex/Complex.cpp.o: ../complex/Complex.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/to_underlying.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/compare \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/initializer_list \
+  ../vector/include/Vector.hpp \
   ../complex/include/Complex.hpp \
   ../quaternion/include/Quaternion.hpp \
   ../include/Core.hpp \

@@ -1,9 +1,10 @@
 #ifndef CORE_HPP
 #define CORE_HPP
 
-#include "../solver/include/Solver.hpp"
-#include "../complex/include/Complex.hpp"
-#include "../quaternion/include/Quaternion.hpp"
+#include "../../solver/include/Solver.hpp"
+#include "../../complex/include/Vector.hpp"
+#include "../../complex/include/Complex.hpp"
+#include "../../complex/include/Quaternion.hpp"
 
 #include<string>
 #include<iostream>

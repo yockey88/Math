@@ -24,7 +24,6 @@ Vec3::Vec3(double x , double y , double z) {
 }
 
 namespace vops {
-
     double dotProduct2(Vec2 u , Vec2 v) {
         return ((u.x * v.x) + (u.y * v.y));
     }
@@ -44,5 +43,4 @@ namespace vops {
         orth.z = k;
         return orth;
     }
-
 } // End of vops

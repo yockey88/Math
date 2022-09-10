@@ -143,6 +143,7 @@ CMakeFiles/test.dir/src/Core.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/to_underlying.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/compare \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/initializer_list \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/include/../vector/include/Vector.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/include/../complex/include/Complex.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/Core.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/fstream \

@@ -1,10 +1,11 @@
 CMakeFiles/solver.dir/solver/Solver.cpp.o: \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/Solver.cpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/Solver.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/Core.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../solver/include/Solver.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../complex/include/Complex.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../complex/include/../../include/Core.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/Core.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../solver/include/Solver.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/Vector.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/../../src/include/Core.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/Complex.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__availability \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
@@ -423,9 +424,7 @@ CMakeFiles/solver.dir/solver/Solver.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iomanip \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../quaternion/include/Quaternion.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../quaternion/include/../../include/Core.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../include/../quaternion/include/../../vector/include/Vector.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/Quaternion.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h \

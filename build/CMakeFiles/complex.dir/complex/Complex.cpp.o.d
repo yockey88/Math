@@ -1,9 +1,9 @@
 CMakeFiles/complex.dir/complex/Complex.cpp.o: \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Complex.cpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/Complex.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/Core.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/../solver/include/Solver.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/../solver/include/../../include/Core.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/Core.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../solver/include/Solver.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../solver/include/../../src/include/Core.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/tuple \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config_site \
@@ -144,10 +144,10 @@ CMakeFiles/complex.dir/complex/Complex.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__utility/to_underlying.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/compare \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/initializer_list \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/../complex/include/Complex.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/../quaternion/include/Quaternion.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/../quaternion/include/../../include/Core.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../include/../quaternion/include/../../vector/include/Vector.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../complex/include/Vector.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../complex/include/Complex.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../complex/include/Quaternion.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/Vector.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/ios \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__locale \

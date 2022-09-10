@@ -64,9 +64,7 @@ CMAKE_BINARY_DIR = /Users/chris/Desktop/Code/Projects/GitHub/Math/build
 
 # The main recursive "all" target.
 all: CMakeFiles/solver.dir/all
-all: CMakeFiles/vector.dir/all
 all: CMakeFiles/complex.dir/all
-all: CMakeFiles/quaternion.dir/all
 all: CMakeFiles/math.dir/all
 all: CMakeFiles/test.dir/all
 .PHONY : all
@@ -77,9 +75,7 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/solver.dir/clean
-clean: CMakeFiles/vector.dir/clean
 clean: CMakeFiles/complex.dir/clean
-clean: CMakeFiles/quaternion.dir/clean
 clean: CMakeFiles/math.dir/clean
 clean: CMakeFiles/test.dir/clean
 .PHONY : clean
@@ -111,44 +107,18 @@ CMakeFiles/solver.dir/clean:
 .PHONY : CMakeFiles/solver.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/vector.dir
-
-# All Build rule for target.
-CMakeFiles/vector.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=13,14 "Built target vector"
-.PHONY : CMakeFiles/vector.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/vector.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/vector.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
-.PHONY : CMakeFiles/vector.dir/rule
-
-# Convenience name for target.
-vector: CMakeFiles/vector.dir/rule
-.PHONY : vector
-
-# clean rule for target.
-CMakeFiles/vector.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/vector.dir/build.make CMakeFiles/vector.dir/clean
-.PHONY : CMakeFiles/vector.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/complex.dir
 
 # All Build rule for target.
 CMakeFiles/complex.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=1,2 "Built target complex"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=1,2,3,4 "Built target complex"
 .PHONY : CMakeFiles/complex.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/complex.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/complex.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
 .PHONY : CMakeFiles/complex.dir/rule
@@ -163,47 +133,19 @@ CMakeFiles/complex.dir/clean:
 .PHONY : CMakeFiles/complex.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/quaternion.dir
-
-# All Build rule for target.
-CMakeFiles/quaternion.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=6,7 "Built target quaternion"
-.PHONY : CMakeFiles/quaternion.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/quaternion.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/quaternion.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
-.PHONY : CMakeFiles/quaternion.dir/rule
-
-# Convenience name for target.
-quaternion: CMakeFiles/quaternion.dir/rule
-.PHONY : quaternion
-
-# clean rule for target.
-CMakeFiles/quaternion.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/quaternion.dir/build.make CMakeFiles/quaternion.dir/clean
-.PHONY : CMakeFiles/quaternion.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/math.dir
 
 # All Build rule for target.
-CMakeFiles/math.dir/all: CMakeFiles/solver.dir/all
-CMakeFiles/math.dir/all: CMakeFiles/vector.dir/all
 CMakeFiles/math.dir/all: CMakeFiles/complex.dir/all
-CMakeFiles/math.dir/all: CMakeFiles/quaternion.dir/all
+CMakeFiles/math.dir/all: CMakeFiles/solver.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=3,4,5 "Built target math"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=5,6,7 "Built target math"
 .PHONY : CMakeFiles/math.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/math.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
 .PHONY : CMakeFiles/math.dir/rule
@@ -221,10 +163,8 @@ CMakeFiles/math.dir/clean:
 # Target rules for target CMakeFiles/test.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all: CMakeFiles/solver.dir/all
-CMakeFiles/test.dir/all: CMakeFiles/vector.dir/all
 CMakeFiles/test.dir/all: CMakeFiles/complex.dir/all
-CMakeFiles/test.dir/all: CMakeFiles/quaternion.dir/all
+CMakeFiles/test.dir/all: CMakeFiles/solver.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=10,11,12 "Built target test"
@@ -232,7 +172,7 @@ CMakeFiles/test.dir/all: CMakeFiles/quaternion.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles 0
 .PHONY : CMakeFiles/test.dir/rule

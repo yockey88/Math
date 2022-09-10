@@ -4,10 +4,12 @@
 CMakeFiles/solver.dir/solver/Solver.cpp.o
  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/Solver.cpp
  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/Solver.hpp
- /Users/chris/Desktop/Code/Projects/GitHub/Math/include/Core.hpp
+ /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/Core.hpp
  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/Solver.hpp
+ /Users/chris/Desktop/Code/Projects/GitHub/Math/vector/include/Vector.hpp
+ /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/Core.hpp
  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/Complex.hpp
- /Users/chris/Desktop/Code/Projects/GitHub/Math/include/Core.hpp
+ /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/Core.hpp
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/fstream
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__availability
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config
@@ -427,7 +429,7 @@ CMakeFiles/solver.dir/solver/Solver.cpp.o
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iomanip
  /Users/chris/Desktop/Code/Projects/GitHub/Math/quaternion/include/Quaternion.hpp
- /Users/chris/Desktop/Code/Projects/GitHub/Math/include/Core.hpp
+ /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/Core.hpp
  /Users/chris/Desktop/Code/Projects/GitHub/Math/vector/include/Vector.hpp
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cmath

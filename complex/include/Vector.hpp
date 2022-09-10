@@ -1,6 +1,8 @@
 #ifndef VECTOR_HPP
 #define VECTOR_HPP
 
+#include "../../src/include/Core.hpp"
+
 namespace Y {
 
     namespace math {
@@ -33,8 +35,6 @@ namespace Y {
             double dotProduct2(Vec2 u , Vec2 v);
 
             double dotProduct3(Vec3 u , Vec3 v);
-
-            // double crossProduct2(Vec2 u , Vec2 v);
 
             Vec3 crossProduct3(Vec3 u , Vec3 v);
 

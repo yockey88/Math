@@ -21,7 +21,7 @@ namespace Y {
             vecPart.z = 0;
         }
 
-        Quaternion::Quaternion(int real , int i , int j , int k) {
+        Quaternion::Quaternion(double real , double i , double j , double k) {
             this->real = real;
             this->i = i;
             this->j = j;
@@ -51,27 +51,16 @@ namespace Y {
 
         Quaternion Quaternion::operator*(Quaternion &other) {
             Quaternion newQ;
-            int hold1 , hold2 , hold3 , hold4 , hold5 , hold6 , hold7 , hold8 , hold9 , hold10 , hold11 , hold12 , hold13 , hold14 , hold15 , hold16; 
-            hold1 = real * other.getReal();
-            hold5 = i * other.getI() * (-1);
-            hold9 = j * other.getJ() * (-1);
-            hold13 = k * other.getK() * (-1);
-            newQ.setReal(hold1 + hold5 + hold9 + hold13);
-            hold2 = real * other.getI() ;
-            hold6 = i * other.getReal();
-            hold10 = j * other.getK();
-            hold14 = k * other.getJ() * (-1);
-            newQ.setI(hold2 + hold6 + hold10 + hold14);
-            hold3 = real * other.getJ();
-            hold7 = i * other.getK() * (-1);
-            hold11 = j * other.getReal();
-            hold15 = k * other.getI();
-            newQ.setJ(hold3 + hold7 + hold11 + hold15);
-            hold4 = real * other.getK();
-            hold8 = i * other.getJ();
-            hold12 = j * other.getI() * (-1);
-            hold16 = k * other.getReal();
-            newQ.setK(hold4 + hold8 + hold12 + hold16);
+            double naught = real * other.getReal();
+            double dot = (i * other.getI()) + (j * other.getJ()) + (k * other.getK());
+            Vec3 scaledNew(real * other.getI() , real * other.getJ() , real * other.getK());
+            Vec3 scaledOther(other.getReal() * i , other.getReal() * j , other.getReal() * k);
+            Vec3 addScaled(scaledNew.x + scaledOther.x , scaledNew.y + scaledOther.y , scaledNew.z + scaledOther.z);
+            Vec3 cross = vops::crossProduct3(vecPart , other.getVecPart());
+            newQ.setReal(naught - dot);
+            newQ.setI(scaledNew.x + scaledOther.x + cross.x);
+            newQ.setJ(scaledNew.y + scaledOther.y + cross.y);
+            newQ.setK(scaledNew.z + scaledOther.z + cross.z);
             return newQ;
         }
 

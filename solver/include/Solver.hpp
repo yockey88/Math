@@ -1,7 +1,7 @@
 #ifndef SOLVER_HPP
 #define SOLVER_HPP
 
-#include "../../include/Core.hpp"
+#include "../../src/include/Core.hpp"
 
 #include<tuple>
 
