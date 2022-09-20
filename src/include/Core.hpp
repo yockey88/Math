@@ -28,6 +28,7 @@ namespace Y {
 
             void m_menu();
             void m_menuOptions(auto &input);
+            void quat_menu();
         };
 
         ///////////////////////
