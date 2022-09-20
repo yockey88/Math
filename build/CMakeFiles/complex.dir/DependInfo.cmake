@@ -10,7 +10,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Complex.cpp" "CMakeFiles/complex.dir/complex/Complex.cpp.o" "gcc" "CMakeFiles/complex.dir/complex/Complex.cpp.o.d"
   "/Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Quaternion.cpp" "CMakeFiles/complex.dir/complex/Quaternion.cpp.o" "gcc" "CMakeFiles/complex.dir/complex/Quaternion.cpp.o.d"
-  "/Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Vector.cpp" "CMakeFiles/complex.dir/complex/Vector.cpp.o" "gcc" "CMakeFiles/complex.dir/complex/Vector.cpp.o.d"
   )
 
 # Targets to which this target links.

@@ -1,8 +1,6 @@
 #ifndef CORE_HPP
 #define CORE_HPP
 
-#include "../../solver/include/Solver.hpp"
-#include "../../complex/include/Vector.hpp"
 #include "../../complex/include/Complex.hpp"
 #include "../../complex/include/Quaternion.hpp"
 
@@ -30,8 +28,6 @@ namespace Y {
 
             void m_menu();
             void m_menuOptions(auto &input);
-
-            void runEqnSolver();
         };
 
         ///////////////////////

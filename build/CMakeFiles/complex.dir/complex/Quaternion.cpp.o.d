@@ -1,8 +1,8 @@
-CMakeFiles/math.dir/main.cpp.o: \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/main.cpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/Core.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/../../complex/include/Complex.hpp \
+CMakeFiles/complex.dir/complex/Quaternion.cpp.o: \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Quaternion.cpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/Quaternion.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/Core.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../complex/include/Complex.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__availability \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \
@@ -421,7 +421,7 @@ CMakeFiles/math.dir/main.cpp.o: \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/deque \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iomanip \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/src/include/../../complex/include/Quaternion.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/include/../../src/include/../../complex/include/Quaternion.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/iostream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/cmath \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h \

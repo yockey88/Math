@@ -83,24 +83,10 @@ CMakeFiles/complex.dir/complex/Complex.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/complex.dir/complex/Complex.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Complex.cpp -o CMakeFiles/complex.dir/complex/Complex.cpp.s
 
-CMakeFiles/complex.dir/complex/Vector.cpp.o: CMakeFiles/complex.dir/flags.make
-CMakeFiles/complex.dir/complex/Vector.cpp.o: ../complex/Vector.cpp
-CMakeFiles/complex.dir/complex/Vector.cpp.o: CMakeFiles/complex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/complex.dir/complex/Vector.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/complex.dir/complex/Vector.cpp.o -MF CMakeFiles/complex.dir/complex/Vector.cpp.o.d -o CMakeFiles/complex.dir/complex/Vector.cpp.o -c /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Vector.cpp
-
-CMakeFiles/complex.dir/complex/Vector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/complex.dir/complex/Vector.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Vector.cpp > CMakeFiles/complex.dir/complex/Vector.cpp.i
-
-CMakeFiles/complex.dir/complex/Vector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/complex.dir/complex/Vector.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Vector.cpp -o CMakeFiles/complex.dir/complex/Vector.cpp.s
-
 CMakeFiles/complex.dir/complex/Quaternion.cpp.o: CMakeFiles/complex.dir/flags.make
 CMakeFiles/complex.dir/complex/Quaternion.cpp.o: ../complex/Quaternion.cpp
 CMakeFiles/complex.dir/complex/Quaternion.cpp.o: CMakeFiles/complex.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/complex.dir/complex/Quaternion.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/complex.dir/complex/Quaternion.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/complex.dir/complex/Quaternion.cpp.o -MF CMakeFiles/complex.dir/complex/Quaternion.cpp.o.d -o CMakeFiles/complex.dir/complex/Quaternion.cpp.o -c /Users/chris/Desktop/Code/Projects/GitHub/Math/complex/Quaternion.cpp
 
 CMakeFiles/complex.dir/complex/Quaternion.cpp.i: cmake_force
@@ -114,18 +100,16 @@ CMakeFiles/complex.dir/complex/Quaternion.cpp.s: cmake_force
 # Object files for target complex
 complex_OBJECTS = \
 "CMakeFiles/complex.dir/complex/Complex.cpp.o" \
-"CMakeFiles/complex.dir/complex/Vector.cpp.o" \
 "CMakeFiles/complex.dir/complex/Quaternion.cpp.o"
 
 # External object files for target complex
 complex_EXTERNAL_OBJECTS =
 
 libcomplex.a: CMakeFiles/complex.dir/complex/Complex.cpp.o
-libcomplex.a: CMakeFiles/complex.dir/complex/Vector.cpp.o
 libcomplex.a: CMakeFiles/complex.dir/complex/Quaternion.cpp.o
 libcomplex.a: CMakeFiles/complex.dir/build.make
 libcomplex.a: CMakeFiles/complex.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libcomplex.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX static library libcomplex.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/complex.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/complex.dir/link.txt --verbose=$(VERBOSE)
 

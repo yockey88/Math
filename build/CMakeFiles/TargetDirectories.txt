@@ -1,4 +1,3 @@
-/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles/solver.dir
 /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles/complex.dir
 /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles/math.dir
 /Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles/test.dir

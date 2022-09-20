@@ -3,8 +3,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/complex.dir/complex/Complex.cpp.o.d"
   "CMakeFiles/complex.dir/complex/Quaternion.cpp.o"
   "CMakeFiles/complex.dir/complex/Quaternion.cpp.o.d"
-  "CMakeFiles/complex.dir/complex/Vector.cpp.o"
-  "CMakeFiles/complex.dir/complex/Vector.cpp.o.d"
   "libcomplex.a"
   "libcomplex.pdb"
 )

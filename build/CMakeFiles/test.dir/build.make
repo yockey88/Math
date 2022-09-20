@@ -108,7 +108,6 @@ test_EXTERNAL_OBJECTS =
 test: CMakeFiles/test.dir/tests.cpp.o
 test: CMakeFiles/test.dir/src/Core.cpp.o
 test: CMakeFiles/test.dir/build.make
-test: libsolver.a
 test: libcomplex.a
 test: CMakeFiles/test.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test"

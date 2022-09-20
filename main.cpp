@@ -2,9 +2,10 @@
 
 int main(int argc , char* argv[]) {
     
-    std::unique_ptr<Y::math::YMEngine> engine = std::make_unique<Y::math::YMEngine>();
+    Y::math::YMEngine* engine = new Y::math::YMEngine;
     engine->m_menu();
 
+    delete engine;
     return 0;
 }
 

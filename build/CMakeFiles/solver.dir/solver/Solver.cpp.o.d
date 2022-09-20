@@ -3,9 +3,8 @@ CMakeFiles/solver.dir/solver/Solver.cpp.o: \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/Solver.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/Core.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../solver/include/Solver.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/Vector.hpp \
-  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/../../src/include/Core.hpp \
   /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/Complex.hpp \
+  /Users/chris/Desktop/Code/Projects/GitHub/Math/solver/include/../../src/include/../../complex/include/../../src/include/Core.hpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/fstream \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__availability \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__config \

@@ -5,213 +5,61 @@ namespace Y {
 
     namespace math {
 
+        namespace vops {
+            double dotProduct2(Vec2 u , Vec2 v) {
+                return ((u.x * v.x) + (u.y * v.y));
+            }
+
+            double dotProduct3(Vec3 u , Vec3 v) {
+                return ((u.x * v.x ) + (u.y * v.y) + (u.z * v.z));
+            }
+
+            Vec3 crossProduct3(Vec3 u , Vec3 v) {
+                Vec3 orth;
+                double i , j , k;
+                i = (u.y * v.z) - (u.z * v.y);
+                j = (u.x * v.z) - (u.z * v.x) * (-1);
+                k = (u.x * v.y) - (u.y * v.x);
+                orth.x = i;
+                orth.y = j;
+                orth.z = k;
+                return orth;
+            }
+        } // End of vops
+
         // structs //
 
         /////////////
 
         // classes //
 
-        Quaternion::Quaternion() {
-            real = 0;
-            i = 0;
-            j = 0;
-            k = 0;
-            vecPart.x = 0;
-            vecPart.y = 0;
-            vecPart.z = 0;
+        Quaternion Quaternion::operator+(const Quaternion &other) {
+            Quaternion quat;
+            Vec3 newV(imag.x + other.getI() , imag.y + other.getJ() , imag.z + other.getK());
+            double newReal = real + other.getReal();
+            quat.setImag(newV);
+            quat.setReal(newReal);
+            return quat;
         }
 
-        Quaternion::Quaternion(double real , double i , double j , double k) {
-            this->real = real;
-            this->i = i;
-            this->j = j;
-            this->k = k;
-            vecPart.x = i;
-            vecPart.y = j;
-            vecPart.z = k;
+        Quaternion Quaternion::operator-(const Quaternion &other) {
+            Quaternion quat;
+            Vec3 newV(imag.x - other.getI() , imag.y - other.getJ() , imag.z - other.getK());
+            double newReal = real - other.getReal();
+            quat.setImag(newV);
+            quat.setReal(newReal);
+            return quat;
         }
 
-        Quaternion Quaternion::operator+(Quaternion &other) {
-            Quaternion newQ;
-            newQ.setReal(real + other.getReal());
-            newQ.setI(i + other.getI());
-            newQ.setJ(j + other.getJ());
-            newQ.setK(k + other.getK());
-            return newQ;
-        }
-
-        Quaternion Quaternion::operator-(Quaternion &other) {
-            Quaternion newQ;
-            newQ.setReal(real - other.getReal());
-            newQ.setI(i - other.getI());
-            newQ.setJ(j - other.getJ());
-            newQ.setK(k - other.getK());
-            return newQ;
-        }
-
-        Quaternion Quaternion::operator*(Quaternion &other) {
-            Quaternion newQ;
-            double naught = real * other.getReal();
-            double dot = (i * other.getI()) + (j * other.getJ()) + (k * other.getK());
-            Vec3 scaledNew(real * other.getI() , real * other.getJ() , real * other.getK());
-            Vec3 scaledOther(other.getReal() * i , other.getReal() * j , other.getReal() * k);
-            Vec3 addScaled(scaledNew.x + scaledOther.x , scaledNew.y + scaledOther.y , scaledNew.z + scaledOther.z);
-            Vec3 cross = vops::crossProduct3(vecPart , other.getVecPart());
-            newQ.setReal(naught - dot);
-            newQ.setI(scaledNew.x + scaledOther.x + cross.x);
-            newQ.setJ(scaledNew.y + scaledOther.y + cross.y);
-            newQ.setK(scaledNew.z + scaledOther.z + cross.z);
-            return newQ;
-        }
-
-        void Quaternion::operator+=(Quaternion &other) {
-            real += other.getReal();
-            i += other.getI();
-            j += other.getJ();
-            k += other.getK();
-            return;
-        }
-
-        void Quaternion::operator-=(Quaternion &other) {
-            real -= other.getReal();
-            i -= other.getI();
-            j -= other.getJ();
-            k -= other.getK();
-            return;
-        }
-
-        void Quaternion::operator*=(Quaternion &other) {
-            int hold1 , hold2 , hold3 , hold4 , hold5 , hold6 , hold7 , hold8 , hold9 , hold10 , hold11 , hold12 , hold13 , hold14 , hold15 , hold16; 
-            hold1 = real * other.getReal();
-            hold5 = i * other.getI() * (-1);
-            hold9 = j * other.getJ() * (-1);
-            hold13 = k * other.getK() * (-1);
-            real = hold1 + hold5 + hold9 + hold13;
-            hold2 = real * other.getI() ;
-            hold6 = i * other.getReal();
-            hold10 = j * other.getK();
-            hold14 = k * other.getJ() * (-1);
-            i = hold2 + hold6 + hold10 + hold14;
-            hold3 = real * other.getJ();
-            hold7 = i * other.getK() * (-1);
-            hold11 = j * other.getReal();
-            hold15 = k * other.getI();
-            j = hold3 + hold7 + hold11 + hold15;
-            hold4 = real * other.getK();
-            hold8 = i * other.getJ();
-            hold12 = j * other.getI() * (-1);
-            hold16 = k * other.getReal();
-            k = hold4 + hold8 + hold12 + hold16;
-            return;
+        Quaternion Quaternion::operator*(const Quaternion &other) {
+            Quaternion quat;
+            // real * other.getVec() + other.getReal * imag
+            Vec3 newV;
+            double newReal = (real * real) + vops::dotProduct3(imag , other.getVec());
+            return quat;
         }
 
         std::ostream& operator<<(std::ostream &os , const Quaternion &q) {
-            if (q.getReal() != 0 && q.getI() != 0 && q.getJ() != 0 && q.getK() != 0) {
-                os << q.getReal();
-                if (q.getI() > 0) {
-                    os << "+";
-                }
-                os  << q.getI() << "i";
-                if (q.getJ() > 0) {
-                    os << "+";
-                }
-                os  << q.getJ() << "j";
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os  << q.getK() << "k";
-            } else if (q.getReal() != 0 && q.getI() != 0 && q.getJ() != 0 && q.getK() == 0) {
-                os << q.getReal();
-                if (q.getI() > 0) {
-                    os << "+";
-                }
-                os  << q.getI() << "i";
-                if (q.getJ() > 0) {
-                    os << "+";
-                }
-                os  << q.getJ() << "j";
-            } else if (q.getReal() != 0 && q.getI() != 0 && q.getJ() == 0 && q.getK() != 0) {
-                os << q.getReal();
-                if (q.getI() > 0) {
-                    os << "+";
-                }
-                os  << q.getI() << "i";
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os  << q.getK() << "k";
-            } else if (q.getReal() != 0 && q.getI() == 0 && q.getJ() != 0 && q.getK() != 0) {
-                os << q.getReal();
-                if (q.getJ() > 0) {
-                    os << "+";
-                }
-                os  << q.getJ() << "j";
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os  << q.getK() << "k";
-            } else if (q.getReal() == 0 && q.getI() != 0 && q.getJ() != 0 && q.getK() != 0) {
-                os << q.getI();
-                os << "i";
-                if (q.getJ() > 0) {
-                    os << "+";
-                }
-                os  << q.getJ() << "j";
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os  << q.getK() << "k";
-            } else if (q.getReal() != 0 && q.getI() != 0 && q.getJ() == 0 && q.getK() == 0) {
-                os << q.getReal();
-                if (q.getI() > 0) {
-                    os << "+";
-                }
-                os  << q.getI() << "i";
-            } else if (q.getReal() != 0 && q.getI() == 0 && q.getJ() != 0 && q.getK() == 0) {
-                os << q.getReal();
-                if (q.getJ() > 0) {
-                    os << "+";
-                }
-                os  << q.getJ() << "j";
-            } else if (q.getReal() == 0 && q.getI() != 0 && q.getJ() != 0 && q.getK() == 0) {
-                os << q.getI();
-                os << "i";
-                if (q.getJ() > 0) {
-                    os << "+";
-                }
-                os  << q.getJ() << "j";
-            } else if (q.getReal() != 0 && q.getI() == 0 && q.getJ() == 0 && q.getK() != 0) {
-                os << q.getReal();
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os << q.getK() << "k";
-            } else if (q.getReal() == 0 && q.getI() != 0 && q.getJ() == 0 && q.getK() != 0) {
-                os << q.getI();
-                os << "i";
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os  << q.getK() << "k";
-            } else if (q.getReal() == 0 && q.getI() == 0 && q.getJ() != 0 && q.getK() != 0) {
-                os << q.getJ();
-                os << "j";
-                if (q.getK() > 0) {
-                    os << "+";
-                }
-                os  << q.getK() << "k";
-            } else if (q.getReal() != 0 && q.getI() == 0 && q.getJ() == 0 && q.getK() == 0) {
-                os << q.getReal();
-            } else if (q.getReal() == 0 && q.getI() != 0 && q.getJ() == 0 && q.getK() == 0) {
-                os << q.getI();
-                os << "i";
-            }  else if (q.getReal() == 0 && q.getI() == 0 && q.getJ() != 0 && q.getK() == 0) {
-                os << q.getJ();
-                os << "j";
-            } else if (q.getReal() == 0 && q.getI() == 0 && q.getJ() == 0 && q.getK() != 0) {
-                os << q.getK();
-                os << "k";
-            }
             return os;
         }
 

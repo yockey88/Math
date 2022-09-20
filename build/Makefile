@@ -117,19 +117,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named solver
-
-# Build rule for target.
-solver: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 solver
-.PHONY : solver
-
-# fast build rule for target.
-solver/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/build
-.PHONY : solver/fast
-
-#=============================================================================
 # Target rules for targets named complex
 
 # Build rule for target.
@@ -216,30 +203,6 @@ complex/Quaternion.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/complex/Quaternion.cpp.s
 .PHONY : complex/Quaternion.cpp.s
 
-complex/Vector.o: complex/Vector.cpp.o
-.PHONY : complex/Vector.o
-
-# target to build an object file
-complex/Vector.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/complex/Vector.cpp.o
-.PHONY : complex/Vector.cpp.o
-
-complex/Vector.i: complex/Vector.cpp.i
-.PHONY : complex/Vector.i
-
-# target to preprocess a source file
-complex/Vector.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/complex/Vector.cpp.i
-.PHONY : complex/Vector.cpp.i
-
-complex/Vector.s: complex/Vector.cpp.s
-.PHONY : complex/Vector.s
-
-# target to generate assembly for a file
-complex/Vector.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/complex.dir/build.make CMakeFiles/complex.dir/complex/Vector.cpp.s
-.PHONY : complex/Vector.cpp.s
-
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -263,30 +226,6 @@ main.s: main.cpp.s
 main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/math.dir/build.make CMakeFiles/math.dir/main.cpp.s
 .PHONY : main.cpp.s
-
-solver/Solver.o: solver/Solver.cpp.o
-.PHONY : solver/Solver.o
-
-# target to build an object file
-solver/Solver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver/Solver.cpp.o
-.PHONY : solver/Solver.cpp.o
-
-solver/Solver.i: solver/Solver.cpp.i
-.PHONY : solver/Solver.i
-
-# target to preprocess a source file
-solver/Solver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver/Solver.cpp.i
-.PHONY : solver/Solver.cpp.i
-
-solver/Solver.s: solver/Solver.cpp.s
-.PHONY : solver/Solver.s
-
-# target to generate assembly for a file
-solver/Solver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/solver.dir/build.make CMakeFiles/solver.dir/solver/Solver.cpp.s
-.PHONY : solver/Solver.cpp.s
 
 src/Core.o: src/Core.cpp.o
 .PHONY : src/Core.o
@@ -349,7 +288,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... complex"
 	@echo "... math"
-	@echo "... solver"
 	@echo "... test"
 	@echo "... complex/Complex.o"
 	@echo "... complex/Complex.i"
@@ -357,15 +295,9 @@ help:
 	@echo "... complex/Quaternion.o"
 	@echo "... complex/Quaternion.i"
 	@echo "... complex/Quaternion.s"
-	@echo "... complex/Vector.o"
-	@echo "... complex/Vector.i"
-	@echo "... complex/Vector.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... solver/Solver.o"
-	@echo "... solver/Solver.i"
-	@echo "... solver/Solver.s"
 	@echo "... src/Core.o"
 	@echo "... src/Core.i"
 	@echo "... src/Core.s"

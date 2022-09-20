@@ -108,7 +108,6 @@ math_EXTERNAL_OBJECTS =
 math: CMakeFiles/math.dir/main.cpp.o
 math: CMakeFiles/math.dir/src/Core.cpp.o
 math: CMakeFiles/math.dir/build.make
-math: libsolver.a
 math: libcomplex.a
 math: CMakeFiles/math.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/chris/Desktop/Code/Projects/GitHub/Math/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable math"
